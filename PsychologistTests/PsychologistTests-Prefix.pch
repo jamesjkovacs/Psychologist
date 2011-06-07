@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PsychologistTests' target in the 'PsychologistTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
