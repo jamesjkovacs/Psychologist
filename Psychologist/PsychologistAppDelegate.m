@@ -7,16 +7,22 @@
 //
 
 #import "PsychologistAppDelegate.h"
+#import "PsychologistViewController.h"
 
 @implementation PsychologistAppDelegate
 
 
-@synthesize window=_window;
+@synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
+    UINavigationController *navcon = [[UINavigationController alloc] init];
+    PsychologistViewController *pvc = [[PsychologistViewController alloc] init];
+    [navcon pushViewController:pvc animated:NO];
+    [pvc release];
+    [window addSubview:navcon.view];
+    [window makeKeyAndVisible];
     return YES;
 }
 
@@ -61,7 +67,7 @@
 
 - (void)dealloc
 {
-    [_window release];
+    [window release];
     [super dealloc];
 }
 
