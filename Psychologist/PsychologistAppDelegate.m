@@ -22,7 +22,7 @@
     [navcon pushViewController:pvc animated:NO];
     [pvc release];
     [window addSubview:navcon.view];
-    [window makeKeyAndVisible];
+    [window makeKeyAndVisible]; 
     return YES;
 }
 
